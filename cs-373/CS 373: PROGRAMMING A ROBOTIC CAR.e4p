@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project CS 373: PROGRAMMING A ROBOTIC CAR -->
-<!-- Saved: 2012-03-27, 23:21:04 -->
+<!-- Saved: 2012-04-02, 02:29:57 -->
 <!-- Copyright (C) 2012 Patricio Barletta, patricio78@gmail.com -->
 <Project version="4.6">
   <Language>en</Language>
@@ -12,17 +12,12 @@
   <Author>Patricio Barletta</Author>
   <Email>patricio78@gmail.com</Email>
   <Sources>
-    <Source>__init__.py</Source>
-    <Source>unit1/__init__.py</Source>
     <Source>unit1/test.py</Source>
-    <Source>unit2/__init__.py</Source>
     <Source>unit2/test.py</Source>
-    <Source>unit3/__init__.py</Source>
     <Source>unit3/showParticleFilter.py</Source>
     <Source>unit3/homework3_4.py</Source>
     <Source>unit3/homework3_5.py</Source>
     <Source>unit3/homework3_6.py</Source>
-    <Source>unit4/__init__.py</Source>
     <Source>unit4/quiz4_8.py</Source>
     <Source>unit4/quiz4_9.py</Source>
     <Source>unit4/quiz4_10.py</Source>
@@ -31,7 +26,6 @@
     <Source>unit4/quiz4_18.py</Source>
     <Source>unit4/quiz4_19.py</Source>
     <Source>unit4/homework4_5.py</Source>
-    <Source>unit5/__init__.py</Source>
     <Source>unit5/unit5_5.py</Source>
     <Source>unit5/unit5_9.py</Source>
     <Source>unit5/unit5_11.py</Source>
@@ -40,8 +34,13 @@
     <Source>unit5/homework5_2.py</Source>
     <Source>unit5/homework5_3.py</Source>
     <Source>unit5/homework5_4.py</Source>
-    <Source>unit6/__init__.py</Source>
     <Source>unit6/unit6_6.py</Source>
+    <Source>unit6/unit6_7.py</Source>
+    <Source>unit6/unit6_17.py</Source>
+    <Source>unit6/unit6_19.py</Source>
+    <Source>unit6/unit6_21.py</Source>
+    <Source>unit6/unit6_22.py</Source>
+    <Source>unit6/homework6_3.py</Source>
   </Sources>
   <Forms>
   </Forms>
