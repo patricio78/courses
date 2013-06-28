@@ -1,3 +1,5 @@
 *.pdf
 *.mat
 data/
+*.class
+out/
