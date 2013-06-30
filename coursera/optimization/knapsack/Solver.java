@@ -69,15 +69,45 @@ public class Solver {
         int value = 0;
         boolean[] taken = new boolean[items];
 
+//        value = greedy(capacity, values, weights, taken);
         value = branchAndBound(capacity, values, weights, taken);
 //        value = dynamicProgramming(capacity, values, weights, taken);
 
         // prepare the solution in the specified output format
         System.out.println(value+" 1");
         for(int i=0; i < items; i++){
-            System.out.print(taken[i]+" ");
+            System.out.print((taken[i] ? "1" : "0" )+" ");
         }
         System.out.println("");
+    }
+
+    private static int greedy(int capacity, int[] values, int[] weights, boolean[] taken)
+    {
+        Item[] weightedItems = new Item[values.length];
+        for (int i = 0; i < weightedItems.length; i++) {
+            weightedItems[i] = new Item(i, values[i]/(float)weights[i]);
+        }
+        Arrays.sort(weightedItems, new Comparator<Item>() {
+            @Override
+            public int compare(Item o1, Item o2) {
+                return o1.weight < o2.weight ? 1 : -1;
+            }
+        });
+
+
+        int weight = 0;
+        int value = 0;
+        for(int i=0; i < values.length; i++){
+            if(weight + weights[weightedItems[i].index] <= capacity){
+                taken[weightedItems[i].index] = true;
+                value += values[weightedItems[i].index];
+                weight += weights[weightedItems[i].index];
+            } else {
+//                taken[weightedItems[i].index] = false;
+                break;
+            }
+        }
+        return value;
     }
 
     private static int branchAndBound(int capacity, int[] values, int[] weights, boolean[] taken)
@@ -112,22 +142,29 @@ public class Solver {
         List<Integer> bestList = new ArrayList<>();
         while (!queue.isEmpty()) {
             final Node currentNode = queue.remove();
+            int value;
 
             if (currentNode.bound > maxValue && currentNode.level < values.length-1) {
                 Node u = new Node();
                 u.level = currentNode.level + 1;
-                u.size = currentNode.size + weights[currentNode.level+1];
-                u.value = currentNode.value + values[currentNode.level+1];
+                u.size = currentNode.size + weights[weightedItems[u.level].index];
                 u.copyList(currentNode.contains);
-                u.add(currentNode.level+1);
-                if (u.size <= capacity && u.value > maxValue)  {
-                    maxValue = u.value;
+//                u.add(currentNode.level+1);
+                u.add(weightedItems[u.level].index);
+                value = currentNode.value + values[weightedItems[u.level].index];
+                if (u.size <= capacity && value > maxValue)  {
                     bestList.clear();
                     bestList.addAll(u.contains);
                 }
                 u.bound = currentNode.bound;
                 if (u.bound > maxValue && u.size <= capacity) {
                     queue.add(u);
+                    u.value = value;
+                }
+                else if (u.level >= values.length-1 && currentNode.size <= capacity) {
+                    if (currentNode.value > maxValue) {
+                        maxValue = currentNode.value;
+                    }
                 }
                 Node w = new Node();
                 w.level = currentNode.level + 1;
@@ -135,11 +172,17 @@ public class Solver {
                 w.value = currentNode.value;
                 w.copyList(currentNode.contains);
 //                w.bound = bound(capacity, values, weights, weightedItems, w.level);
-                w.bound = bounds[w.level];
+                w.bound = bounds[weightedItems[w.level].index];
                 if (w.bound > maxValue && w.size <= capacity)
                 {
                     queue.add(w);
                 }
+                else if (w.level >= values.length-1 && w.size <= capacity && w.value > maxValue) {
+                    maxValue = w.value;
+                }
+            }
+            else if (currentNode.value > maxValue) {
+                maxValue = currentNode.value;
             }
         }
 

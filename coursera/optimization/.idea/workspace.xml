@@ -3,13 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="e1f5e9d1-b126-44fd-8dab-5702449bda27" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/knapsack/Solver.java" afterPath="$PROJECT_DIR$/knapsack/Solver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/knapsack/knapsack.iml" afterPath="$PROJECT_DIR$/knapsack/knapsack.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/knapsack/solver.py" afterPath="$PROJECT_DIR$/knapsack/solver.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/knapsack/tmp.data" afterPath="$PROJECT_DIR$/knapsack/tmp.data" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="optimization.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1372013838933" ignored="false" />
-    <file path="/Solver.java" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1372557024868" ignored="false" />
-    <file path="/fragment.java" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1372557526761" ignored="false" />
+    <file path="/Dummy.txt" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1372608331524" ignored="false" />
+    <file path="/Solver.java" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1372629532310" ignored="false" />
+    <file path="/fragment.java" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1372629609173" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,10 +76,12 @@
       <file leaf-file-name="Solver.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/knapsack/Solver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="135" column="64" selection-start="4504" selection-end="4504" vertical-scroll-proportion="0.6536412">
+            <state line="156" column="73" selection-start="5223" selection-end="5223" vertical-scroll-proportion="0.44900352">
               <folding>
-                <element signature="e#2652#2828#0" expanded="true" />
-                <element signature="e#2817#2818#0" expanded="true" />
+                <element signature="e#2719#2895#0" expanded="true" />
+                <element signature="e#2884#2885#0" expanded="true" />
+                <element signature="e#3722#3898#0" expanded="true" />
+                <element signature="e#3887#3888#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -197,9 +202,9 @@
     <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RunManager" selected="Application.Solver">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -214,19 +219,6 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -254,6 +246,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -292,8 +297,8 @@
     </configuration>
     <configuration default="false" name="Solver" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="Solver" />
-      <option name="VM_PARAMETERS" value="-Xmx2048m" />
-      <option name="PROGRAM_PARAMETERS" value="-file=ks_45_0" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="-file=ks_400_0" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/knapsack/data" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -312,8 +317,23 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <list size="1">
+    <configuration default="false" name="submit" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="5005" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <ConfigurationWrapper RunnerId="Debug" />
+      <method />
+    </configuration>
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.Solver" />
+      <item index="1" class="java.lang.String" itemvalue="Remote.submit" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -347,7 +367,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1025" extended-state="0" />
+    <frame x="0" y="0" width="1680" height="1025" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -358,13 +378,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6211604" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24570024" sideWeight="0.67007965" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32992035" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -441,45 +461,49 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#2652#2828#0" expanded="true" />
-            <element signature="e#2817#2818#0" expanded="true" />
+            <element signature="e#2719#2895#0" expanded="true" />
+            <element signature="e#2884#2885#0" expanded="true" />
+            <element signature="e#3722#3898#0" expanded="true" />
+            <element signature="e#3887#3888#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knapsack/Solver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#2719#2895#0" expanded="true" />
+            <element signature="e#2884#2885#0" expanded="true" />
+            <element signature="e#3722#3898#0" expanded="true" />
+            <element signature="e#3887#3888#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/apps/jdk1.7/src.zip!/java/util/ArrayDeque.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="33" selection-start="3253" selection-end="3253" vertical-scroll-proportion="0.96483004">
-          <folding />
-        </state>
+        <state line="94" column="33" selection-start="3253" selection-end="3253" vertical-scroll-proportion="0.96483004" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/apps/jdk1.7/jre/lib/jfxrt.jar!/com/sun/javafx/collections/transformation/SortedList.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="19" selection-start="190" selection-end="190" vertical-scroll-proportion="0.08792497">
-          <folding />
-        </state>
+        <state line="6" column="19" selection-start="190" selection-end="190" vertical-scroll-proportion="0.08792497" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/apps/jdk1.7/src.zip!/java/util/TreeSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="392" column="13" selection-start="15108" selection-end="15108" vertical-scroll-proportion="0.33294255">
-          <folding />
-        </state>
+        <state line="392" column="13" selection-start="15108" selection-end="15108" vertical-scroll-proportion="0.33294255" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/apps/jdk1.7/src.zip!/java/util/SortedSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="212" column="6" selection-start="9891" selection-end="9891" vertical-scroll-proportion="0.7186401">
-          <folding />
-        </state>
+        <state line="212" column="6" selection-start="9891" selection-end="9891" vertical-scroll-proportion="0.7186401" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/apps/jdk1.7/src.zip!/java/util/RandomAccess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="17" selection-start="1975" selection-end="1975" vertical-scroll-proportion="0.7561548">
-          <folding />
-        </state>
+        <state line="66" column="17" selection-start="1975" selection-end="1975" vertical-scroll-proportion="0.7561548" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/apps/jdk1.7/src.zip!/java/util/List.java">
@@ -505,16 +529,12 @@
     </entry>
     <entry file="jar://$USER_HOME$/apps/jdk1.7/src.zip!/java/util/AbstractQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="17" selection-start="3429" selection-end="3429" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="112" column="17" selection-start="3429" selection-end="3429" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/apps/jdk1.7/src.zip!/java/util/PriorityQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="631" column="17" selection-start="22753" selection-end="22753" vertical-scroll-proportion="0.33294255">
-          <folding />
-        </state>
+        <state line="631" column="17" selection-start="22753" selection-end="22753" vertical-scroll-proportion="0.33294255" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/apps/jdk1.7/src.zip!/java/util/Queue.java">
@@ -526,17 +546,17 @@
     </entry>
     <entry file="jar://$USER_HOME$/apps/jdk1.7/src.zip!/java/lang/ref/Reference.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="132" column="0" selection-start="4499" selection-end="4499" vertical-scroll-proportion="0.3321492">
-          <folding />
-        </state>
+        <state line="132" column="0" selection-start="4499" selection-end="4499" vertical-scroll-proportion="0.3321492" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/knapsack/Solver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="64" selection-start="4504" selection-end="4504" vertical-scroll-proportion="0.6536412">
+        <state line="156" column="73" selection-start="5223" selection-end="5223" vertical-scroll-proportion="0.44900352">
           <folding>
-            <element signature="e#2652#2828#0" expanded="true" />
-            <element signature="e#2817#2818#0" expanded="true" />
+            <element signature="e#2719#2895#0" expanded="true" />
+            <element signature="e#2884#2885#0" expanded="true" />
+            <element signature="e#3722#3898#0" expanded="true" />
+            <element signature="e#3887#3888#0" expanded="true" />
           </folding>
         </state>
       </provider>

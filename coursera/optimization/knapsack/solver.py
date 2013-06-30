@@ -16,7 +16,8 @@ def solveIt(inputData):
 
     # Runs the command: java Solver -file=tmp.data
 
-    process = Popen(['java', 'Solver', '-file=' + tmpFileName],
+#    process = Popen(['java', '-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005', '-Xms512m', '-Xmx1024m', 'Solver', '-file=' + tmpFileName],
+    process = Popen(['java', '-Xms512m', '-Xmx1024m', 'Solver', '-file=' + tmpFileName],
                     stdout=PIPE)
     (stdout, stderr) = process.communicate()
 
