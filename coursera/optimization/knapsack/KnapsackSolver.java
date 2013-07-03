@@ -78,9 +78,9 @@ public class KnapsackSolver {
         boolean[] taken = new boolean[items];
 
 //        value = greedy(capacity, values, weights, taken);
-        value = branchAndBound(capacity, values, weights, taken);
+//        value = branchAndBound(capacity, values, weights, taken);
 //        value = dynamicProgramming(capacity, values, weights, taken);
-//        value = cp(capacity, values, weights, taken);
+        value = cp(capacity, values, weights, taken);
 
         // prepare the solution in the specified output format
         System.out.println(value+" 1");
@@ -94,12 +94,12 @@ public class KnapsackSolver {
     {
         Item[] weightedItems = new Item[values.length];
         for (int i = 0; i < weightedItems.length; i++) {
-            weightedItems[i] = new Item(i, values[i]/(float)weights[i]);
+            weightedItems[i] = new Item(i, values[i]/(float)weights[i], values[i]);
         }
         Arrays.sort(weightedItems, new Comparator<Item>() {
             @Override
             public int compare(Item o1, Item o2) {
-                return o1.weight < o2.weight ? 1 : -1;
+                return o1.ratio < o2.ratio ? 1 : -1;
             }
         });
 
@@ -112,12 +112,12 @@ public class KnapsackSolver {
 
         Model model              = new CPModel();
         Solver solver            = new CPSolver();
-        IntegerVariable[] select = makeIntVarArray("select", values.length,0 , 1);
+        IntegerVariable[] select = makeIntVarArray("select", values.length,0 ,1);
         IntegerVariable totVal   = makeIntVar("totVal", 0, (int) Math.ceil(upperBound));
         model.addConstraint(leq(scalar(weights, select),capacity));
         model.addConstraint(eq(scalar(values, select),totVal));
         solver.read(model);
-        solver.maximize(solver.getVar(totVal), true);
+        solver.maximize(solver.getVar(totVal), false);
         for (int i = 0; i < select.length; i++) {
             taken[i] = solver.getVar(select[i]).getVal() == 1;
 
@@ -129,12 +129,12 @@ public class KnapsackSolver {
     {
         Item[] weightedItems = new Item[values.length];
         for (int i = 0; i < weightedItems.length; i++) {
-            weightedItems[i] = new Item(i, values[i]/(float)weights[i]);
+            weightedItems[i] = new Item(i, values[i]/(float)weights[i], values[i]);
         }
         Arrays.sort(weightedItems, new Comparator<Item>() {
             @Override
             public int compare(Item o1, Item o2) {
-                return o1.weight < o2.weight ? 1 : -1;
+                return  o1.ratio < o2.ratio ? 1 : -1;
             }
         });
 
@@ -158,12 +158,12 @@ public class KnapsackSolver {
     {
         Item[] weightedItems = new Item[values.length];
         for (int i = 0; i < weightedItems.length; i++) {
-            weightedItems[i] = new Item(i, values[i]/(float)weights[i]);
+            weightedItems[i] = new Item(i, values[i]/(float)weights[i], values[i]);
         }
         Arrays.sort(weightedItems, new Comparator<Item>() {
             @Override
             public int compare(Item o1, Item o2) {
-                return o1.weight < o2.weight ? 1 : -1;
+                return o1.ratio < o2.ratio ? 1 : -1;
             }
         });
 
@@ -262,11 +262,13 @@ public class KnapsackSolver {
     private static class Item
     {
         private int index;
-        private float weight;
+        private float ratio;
+        private int value;
 
-        private Item(int index, float weight) {
+        private Item(int index, float ratio, int value) {
             this.index = index;
-            this.weight = weight;
+            this.ratio = ratio;
+            this.value = value;
         }
     }
 
@@ -300,30 +302,23 @@ public class KnapsackSolver {
     }
 
     private static int dynamicProgramming(int capacity, int[] values, int[] weights, boolean[] taken) {
-//        int[][] table = new int[values.length+1][capacity+1];
-        List<Integer>[] table = new List[values.length+1];
-
-        table[0] = new LinkedList<>();
-        for (int i = 0; i < capacity+1; i++) {
-            table[0].add(0);
-        }
+        int[][] table = new int[values.length+1][capacity+1];
 
         int currentItem = 1;
         for (;currentItem < values.length+1;currentItem++) {
-            table[currentItem] = new LinkedList<>();
             for (int currentCapacity = 0; currentCapacity < capacity+1;currentCapacity++) {
-                int notTakenVal = table[currentItem-1].get(currentCapacity);
+                int notTakenVal = table[currentItem-1][currentCapacity];
                 if (weights[currentItem-1] <= currentCapacity) {
-                    int takenVal = values[currentItem-1] + table[currentItem-1].get(currentCapacity-weights[currentItem-1]);
+                    int takenVal = values[currentItem-1] + table[currentItem-1][currentCapacity-weights[currentItem-1]];
                     if ( notTakenVal < takenVal) {
-                        table[currentItem].add(currentCapacity, takenVal);
+                        table[currentItem][currentCapacity] = takenVal;
                     }
                     else {
-                        table[currentItem].add(currentCapacity, notTakenVal);
+                        table[currentItem][currentCapacity] = notTakenVal;
                     }
                 }
                 else {
-                    table[currentItem].add(currentCapacity, notTakenVal);
+                    table[currentItem][currentCapacity] = notTakenVal;
                 }
             }
         }
@@ -331,12 +326,12 @@ public class KnapsackSolver {
         int currentCapacity = capacity;
         for (int i=values.length;i>0;i--)
         {
-            if (table[i].get(currentCapacity) > table[i-1].get(currentCapacity)) {
+            if (table[i][currentCapacity] > table[i-1][currentCapacity]) {
                 taken[i-1] = true;
                 currentCapacity -= weights[i-1];
             }
         }
-        return table[currentItem-1].get(capacity);
+        return table[currentItem-1][capacity];
     }
 
     private static class Key

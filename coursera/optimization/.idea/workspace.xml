@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1f5e9d1-b126-44fd-8dab-5702449bda27" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/knapsack/Solver.java" afterPath="$PROJECT_DIR$/knapsack/Solver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/knapsack/knapsack.iml" afterPath="$PROJECT_DIR$/knapsack/knapsack.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/knapsack/solver.py" afterPath="$PROJECT_DIR$/knapsack/solver.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/knapsack/tmp.data" afterPath="$PROJECT_DIR$/knapsack/tmp.data" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/choco_solver_2_1_5_with_sources.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/knapsack/tmp.data" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/knapsack/KnapsackSolver.java" afterPath="$PROJECT_DIR$/knapsack/KnapsackSolver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/knapsack/solver.py.orig" afterPath="$PROJECT_DIR$/knapsack/solver.py.orig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="optimization.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1372608331524" ignored="false" />
-    <file path="/Solver.java" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1372629532310" ignored="false" />
-    <file path="/fragment.java" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1372629609173" ignored="false" />
+    <file path="/Dummy.txt" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1372815010863" ignored="false" />
+    <file path="/Solver.java" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1372808819441" ignored="false" />
+    <file path="/fragment.java" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1372815751838" ignored="false" />
+    <file path="/KnapsackSolver.java" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1372815746842" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,15 +74,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Solver.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/knapsack/Solver.java">
+      <file leaf-file-name="KnapsackSolver.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/knapsack/KnapsackSolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="156" column="73" selection-start="5223" selection-end="5223" vertical-scroll-proportion="0.44900352">
+            <state line="83" column="30" selection-start="2438" selection-end="2438" vertical-scroll-proportion="0.26595744">
               <folding>
-                <element signature="e#2719#2895#0" expanded="true" />
-                <element signature="e#2884#2885#0" expanded="true" />
-                <element signature="e#3722#3898#0" expanded="true" />
-                <element signature="e#3887#3888#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#4472#4647#0" expanded="true" />
+                <element signature="e#4636#4637#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -106,6 +106,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/knapsack/Solver.java" />
+        <option value="$PROJECT_DIR$/knapsack/KnapsackSolver.java" />
       </list>
     </option>
   </component>
@@ -163,13 +164,16 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="optimization" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -184,29 +188,46 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="OverrideImplement.combined" value="true" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="195" />
     <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="196" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="195" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/knapsack/data" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/choco-2.1.5/choco-solver-2.1.5-with-sources.jar!/" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="200" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="994" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="994" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="200" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="196" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="restartRequiresConfirmation" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="options.lastSelected" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
-  <component name="RunManager" selected="Application.Solver">
+  <component name="RunManager" selected="Application.KnapsackSolver">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -295,9 +316,9 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="Solver" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="Solver" />
-      <option name="VM_PARAMETERS" value="" />
+    <configuration default="false" name="KnapsackSolver" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="KnapsackSolver" />
+      <option name="VM_PARAMETERS" value="-Xmx768m" />
       <option name="PROGRAM_PARAMETERS" value="-file=ks_400_0" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/knapsack/data" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -332,7 +353,7 @@
       <method />
     </configuration>
     <list size="2">
-      <item index="0" class="java.lang.String" itemvalue="Application.Solver" />
+      <item index="0" class="java.lang.String" itemvalue="Application.KnapsackSolver" />
       <item index="1" class="java.lang.String" itemvalue="Remote.submit" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -367,27 +388,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1025" extended-state="1" />
+    <frame x="0" y="0" width="1680" height="1025" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291714" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37883958" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1906924" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6211604" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24570024" sideWeight="0.67007965" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3287827" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -457,26 +478,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/knapsack/Solver.java">
+    <entry file="file://$PROJECT_DIR$/knapsack/KnapsackSolver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#2719#2895#0" expanded="true" />
-            <element signature="e#2884#2885#0" expanded="true" />
-            <element signature="e#3722#3898#0" expanded="true" />
-            <element signature="e#3887#3888#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/knapsack/Solver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#2719#2895#0" expanded="true" />
-            <element signature="e#2884#2885#0" expanded="true" />
-            <element signature="e#3722#3898#0" expanded="true" />
-            <element signature="e#3887#3888#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4472#4647#0" expanded="true" />
+            <element signature="e#4636#4637#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -549,14 +557,25 @@
         <state line="132" column="0" selection-start="4499" selection-end="4499" vertical-scroll-proportion="0.3321492" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/knapsack/Solver.java">
+    <entry file="jar://$USER_HOME$/apps/jdk1.7/src.zip!/java/util/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="73" selection-start="5223" selection-end="5223" vertical-scroll-proportion="0.44900352">
+        <state line="473" column="0" selection-start="13941" selection-end="13941" vertical-scroll-proportion="0.3321492" />
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/choco-2.1.5/choco-solver-2.1.5-with-sources.jar!/choco/Choco.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="125" column="39" selection-start="5974" selection-end="5974" vertical-scroll-proportion="0.24940617">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knapsack/KnapsackSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="30" selection-start="2438" selection-end="2438" vertical-scroll-proportion="0.26595744">
           <folding>
-            <element signature="e#2719#2895#0" expanded="true" />
-            <element signature="e#2884#2885#0" expanded="true" />
-            <element signature="e#3722#3898#0" expanded="true" />
-            <element signature="e#3887#3888#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#4472#4647#0" expanded="true" />
+            <element signature="e#4636#4637#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -626,6 +645,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>choco-solver-2.1.5-with-sources</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
