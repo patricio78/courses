@@ -14,10 +14,10 @@ def solveIt(inputData):
     tmpFile.write(inputData)
     tmpFile.close()
 
-    # Runs the command: java Solver -file=tmp.data
+    # Runs the command: java KnapsackSolver -file=tmp.data
 
-#    process = Popen(['java', '-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005', '-Xms512m', '-Xmx1024m', 'Solver', '-file=' + tmpFileName],
-    process = Popen(['java', '-Xms512m', '-Xmx1024m', 'Solver', '-file=' + tmpFileName],
+#    process = Popen(['java', '-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005', '-Xms512m', '-Xmx1024m', 'KnapsackSolver', '-file=' + tmpFileName],
+    process = Popen(['java', '-Xms512m', '-Xmx768m', '-cp', '/home/patricio/Downloads/choco-2.1.5/choco-solver-2.1.5.jar:.', 'KnapsackSolver', '-file=' + tmpFileName],
                     stdout=PIPE)
     (stdout, stderr) = process.communicate()
 

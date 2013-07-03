@@ -1,13 +1,21 @@
+import choco.cp.model.CPModel;
+import choco.cp.solver.CPSolver;
+import choco.kernel.model.Model;
+import choco.kernel.model.variables.integer.IntegerVariable;
+import choco.kernel.solver.Solver;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
+import static choco.Choco.*;
+
 /**
- * The class <code>Solver</code> is an implementation of a greedy algorithm to solve the knapsack problem.
+ * The class <code>KnapsackSolver</code> is an implementation of a greedy algorithm to solve the knapsack problem.
  *
  */
-public class Solver {
+public class KnapsackSolver {
 
     /**
      * The main class
@@ -72,6 +80,7 @@ public class Solver {
 //        value = greedy(capacity, values, weights, taken);
         value = branchAndBound(capacity, values, weights, taken);
 //        value = dynamicProgramming(capacity, values, weights, taken);
+//        value = cp(capacity, values, weights, taken);
 
         // prepare the solution in the specified output format
         System.out.println(value+" 1");
@@ -79,6 +88,41 @@ public class Solver {
             System.out.print((taken[i] ? "1" : "0" )+" ");
         }
         System.out.println("");
+    }
+
+    private static int cp(int capacity, int[] values, int[] weights, boolean[] taken)
+    {
+        Item[] weightedItems = new Item[values.length];
+        for (int i = 0; i < weightedItems.length; i++) {
+            weightedItems[i] = new Item(i, values[i]/(float)weights[i]);
+        }
+        Arrays.sort(weightedItems, new Comparator<Item>() {
+            @Override
+            public int compare(Item o1, Item o2) {
+                return o1.weight < o2.weight ? 1 : -1;
+            }
+        });
+
+        float[] bounds = new float[values.length];
+        for (int i = 0; i < bounds.length; i++) {
+            bounds[i] = bound(capacity, values, weights, weightedItems, i);
+        }
+
+        float upperBound = bound(capacity, values, weights, weightedItems, -1);
+
+        Model model              = new CPModel();
+        Solver solver            = new CPSolver();
+        IntegerVariable[] select = makeIntVarArray("select", values.length,0 , 1);
+        IntegerVariable totVal   = makeIntVar("totVal", 0, (int) Math.ceil(upperBound));
+        model.addConstraint(leq(scalar(weights, select),capacity));
+        model.addConstraint(eq(scalar(values, select),totVal));
+        solver.read(model);
+        solver.maximize(solver.getVar(totVal), true);
+        for (int i = 0; i < select.length; i++) {
+            taken[i] = solver.getVar(select[i]).getVal() == 1;
+
+        }
+        return solver.getVar(totVal).getVal();
     }
 
     private static int greedy(int capacity, int[] values, int[] weights, boolean[] taken)
@@ -145,11 +189,24 @@ public class Solver {
             int value;
 
             if (currentNode.bound > maxValue && currentNode.level < values.length-1) {
+                Node w = new Node();
+                w.level = currentNode.level + 1;
+                w.size = currentNode.size;
+                w.value = currentNode.value;
+                w.copyList(currentNode.contains);
+                w.bound = bounds[weightedItems[w.level].index];
+                if (w.bound > maxValue && w.size <= capacity)
+                {
+                    queue.add(w);
+                }
+                else if (w.level >= values.length-1 && w.size <= capacity && w.value > maxValue) {
+                    maxValue = w.value;
+                }
+
                 Node u = new Node();
                 u.level = currentNode.level + 1;
                 u.size = currentNode.size + weights[weightedItems[u.level].index];
                 u.copyList(currentNode.contains);
-//                u.add(currentNode.level+1);
                 u.add(weightedItems[u.level].index);
                 value = currentNode.value + values[weightedItems[u.level].index];
                 if (u.size <= capacity && value > maxValue)  {
@@ -166,20 +223,7 @@ public class Solver {
                         maxValue = currentNode.value;
                     }
                 }
-                Node w = new Node();
-                w.level = currentNode.level + 1;
-                w.size = currentNode.size;
-                w.value = currentNode.value;
-                w.copyList(currentNode.contains);
-//                w.bound = bound(capacity, values, weights, weightedItems, w.level);
-                w.bound = bounds[weightedItems[w.level].index];
-                if (w.bound > maxValue && w.size <= capacity)
-                {
-                    queue.add(w);
-                }
-                else if (w.level >= values.length-1 && w.size <= capacity && w.value > maxValue) {
-                    maxValue = w.value;
-                }
+
             }
             else if (currentNode.value > maxValue) {
                 maxValue = currentNode.value;
@@ -256,23 +300,30 @@ public class Solver {
     }
 
     private static int dynamicProgramming(int capacity, int[] values, int[] weights, boolean[] taken) {
-        int[][] table = new int[values.length+1][capacity+1];
+//        int[][] table = new int[values.length+1][capacity+1];
+        List<Integer>[] table = new List[values.length+1];
+
+        table[0] = new LinkedList<>();
+        for (int i = 0; i < capacity+1; i++) {
+            table[0].add(0);
+        }
 
         int currentItem = 1;
         for (;currentItem < values.length+1;currentItem++) {
+            table[currentItem] = new LinkedList<>();
             for (int currentCapacity = 0; currentCapacity < capacity+1;currentCapacity++) {
-                int notTakenVal = table[currentItem-1][currentCapacity];
+                int notTakenVal = table[currentItem-1].get(currentCapacity);
                 if (weights[currentItem-1] <= currentCapacity) {
-                    int takenVal = values[currentItem-1] + table[currentItem-1][currentCapacity-weights[currentItem-1]];
+                    int takenVal = values[currentItem-1] + table[currentItem-1].get(currentCapacity-weights[currentItem-1]);
                     if ( notTakenVal < takenVal) {
-                        table[currentItem][currentCapacity] = takenVal;
+                        table[currentItem].add(currentCapacity, takenVal);
                     }
                     else {
-                        table[currentItem][currentCapacity] = notTakenVal;
+                        table[currentItem].add(currentCapacity, notTakenVal);
                     }
                 }
                 else {
-                    table[currentItem][currentCapacity] = notTakenVal;
+                    table[currentItem].add(currentCapacity, notTakenVal);
                 }
             }
         }
@@ -280,11 +331,40 @@ public class Solver {
         int currentCapacity = capacity;
         for (int i=values.length;i>0;i--)
         {
-            if (table[i][currentCapacity] > table[i-1][currentCapacity]) {
+            if (table[i].get(currentCapacity) > table[i-1].get(currentCapacity)) {
                 taken[i-1] = true;
                 currentCapacity -= weights[i-1];
             }
         }
-        return table[currentItem-1][capacity];
+        return table[currentItem-1].get(capacity);
+    }
+
+    private static class Key
+    {
+        private int i,j;
+
+        private Key(int i, int j) {
+            this.i = i;
+            this.j = j;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+
+            Key key = (Key) o;
+
+            if (i != key.i) return false;
+            return j == key.j;
+
+        }
+
+        @Override
+        public int hashCode() {
+            int result = i;
+            result = 31 * result + j;
+            return result;
+        }
     }
 }
