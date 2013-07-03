@@ -79,8 +79,8 @@ public class KnapsackSolver {
 
 //        value = greedy(capacity, values, weights, taken);
 //        value = branchAndBound(capacity, values, weights, taken);
-//        value = dynamicProgramming(capacity, values, weights, taken);
-        value = cp(capacity, values, weights, taken);
+        value = dynamicProgramming(capacity, values, weights, taken);
+//        value = cp(capacity, values, weights, taken);
 
         // prepare the solution in the specified output format
         System.out.println(value+" 1");
@@ -302,23 +302,29 @@ public class KnapsackSolver {
     }
 
     private static int dynamicProgramming(int capacity, int[] values, int[] weights, boolean[] taken) {
-        int[][] table = new int[values.length+1][capacity+1];
+        int[][] table = new int[2][capacity+1];
+
+        BitSet[] addedItems = new BitSet[capacity+1];
+        for (int i = 0; i < addedItems.length; i++) {
+            addedItems[i] = new BitSet((values.length+1));
+        }
 
         int currentItem = 1;
         for (;currentItem < values.length+1;currentItem++) {
             for (int currentCapacity = 0; currentCapacity < capacity+1;currentCapacity++) {
-                int notTakenVal = table[currentItem-1][currentCapacity];
+                int notTakenVal = table[(currentItem-1)%2][currentCapacity];
                 if (weights[currentItem-1] <= currentCapacity) {
-                    int takenVal = values[currentItem-1] + table[currentItem-1][currentCapacity-weights[currentItem-1]];
+                    int takenVal = values[currentItem-1] + table[(currentItem-1)%2][currentCapacity-weights[currentItem-1]];
                     if ( notTakenVal < takenVal) {
-                        table[currentItem][currentCapacity] = takenVal;
+                        table[currentItem%2][currentCapacity] = takenVal;
+                        addedItems[currentCapacity].set(currentItem);
                     }
                     else {
-                        table[currentItem][currentCapacity] = notTakenVal;
+                        table[currentItem%2][currentCapacity] = notTakenVal;
                     }
                 }
                 else {
-                    table[currentItem][currentCapacity] = notTakenVal;
+                    table[currentItem%2][currentCapacity] = notTakenVal;
                 }
             }
         }
@@ -326,40 +332,16 @@ public class KnapsackSolver {
         int currentCapacity = capacity;
         for (int i=values.length;i>0;i--)
         {
-            if (table[i][currentCapacity] > table[i-1][currentCapacity]) {
+//            if (table[i][currentCapacity] > table[i-1][currentCapacity]) {
+//                taken[i-1] = true;
+//                currentCapacity -= weights[i-1];
+//            }
+            if (addedItems[currentCapacity].get(i)) {
                 taken[i-1] = true;
                 currentCapacity -= weights[i-1];
             }
         }
-        return table[currentItem-1][capacity];
+        return table[(currentItem-1)%2][capacity];
     }
 
-    private static class Key
-    {
-        private int i,j;
-
-        private Key(int i, int j) {
-            this.i = i;
-            this.j = j;
-        }
-
-        @Override
-        public boolean equals(Object o) {
-            if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
-
-            Key key = (Key) o;
-
-            if (i != key.i) return false;
-            return j == key.j;
-
-        }
-
-        @Override
-        public int hashCode() {
-            int result = i;
-            result = 31 * result + j;
-            return result;
-        }
-    }
 }
