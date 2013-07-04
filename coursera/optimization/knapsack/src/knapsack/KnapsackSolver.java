@@ -1,3 +1,5 @@
+package knapsack;
+
 import choco.cp.model.CPModel;
 import choco.cp.solver.CPSolver;
 import choco.kernel.model.Model;
