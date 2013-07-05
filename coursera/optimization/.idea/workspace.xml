@@ -2,21 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e1f5e9d1-b126-44fd-8dab-5702449bda27" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coloring/src/coloring/GraphColoringSolver.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coloring/coloring.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/coloring/solver.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/knapsack/KnapsackSolver.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/knapsack/knapsack.iml" afterPath="$PROJECT_DIR$/knapsack/knapsack.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/knapsack/solver.py" afterPath="$PROJECT_DIR$/knapsack/solver.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/choco_solver_13_03_jar_with_dependencies.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/commons_exec_1_1.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jenkinsSettings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coloring/src/coloring/GraphColoringSolver.java" afterPath="$PROJECT_DIR$/coloring/src/coloring/GraphColoringSolver.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/coloring/coloring.iml" afterPath="$PROJECT_DIR$/coloring/coloring.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="optimization.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1372896882150" ignored="false" />
+    <file path="/Dummy.txt" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1373061021021" ignored="false" />
     <file path="/Solver.java" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1372808819441" ignored="false" />
-    <file path="/fragment.java" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1372860844086" ignored="false" />
+    <file path="/fragment.java" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1373062004172" ignored="false" />
     <file path="/KnapsackSolver.java" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1372859302417" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../main/bpm/main/modules/runtime/bpmn-engine-ejb/src/main/java/oracle/bpm/bpmn/engine/ejb/impl/BPMNInstanceManagerBean.java" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1373050201543" ignored="false" />
+    <file path="/GraphColoringSolver.java" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1373061485562" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../main/bpm/main/modules/workspace/workspace.war/src/main/webapp/WEB-INF/faces-config.xml" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1373061064790" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../main/bpm/main/modules/workspace/workspace.war/pom.xml" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1373061064790" ignored="false" />
+    <file path="$PROJECT_DIR$/../../../main/bpm/main/modules/workspace/workspace.war/src/main/assembly/workspace.webapp.xml" changelist="e1f5e9d1-b126-44fd-8dab-5702449bda27" time="1373061064790" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +34,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -68,6 +70,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -80,7 +83,27 @@
       <file leaf-file-name="GraphColoringSolver.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/coloring/src/coloring/GraphColoringSolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="65" selection-start="211" selection-end="211" vertical-scroll-proportion="0.19366197">
+            <state line="192" column="88" selection-start="6579" selection-end="6579" vertical-scroll-proportion="0.38256657">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultExecuteResultHandler.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/Downloads/commons-exec-1.1.jar!/org/apache/commons/exec/DefaultExecuteResultHandler.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="16" selection-start="911" selection-end="911" vertical-scroll-proportion="-13.8">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KnapsackSolver.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/knapsack/src/knapsack/KnapsackSolver.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="74" column="84" selection-start="815" selection-end="2006" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -106,12 +129,14 @@
       <list>
         <option value="$PROJECT_DIR$/knapsack/Solver.java" />
         <option value="$PROJECT_DIR$/knapsack/KnapsackSolver.java" />
+        <option value="$PROJECT_DIR$/coloring/src/coloring/GraphColoringSolver.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="1" />
-    <option name="width" value="1680" />
+    <option name="x" value="1679" />
+    <option name="y" value="27" />
+    <option name="width" value="1922" />
     <option name="height" value="1024" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -163,7 +188,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -180,6 +204,28 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="optimization" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="knapsack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="optimization" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="knapsack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="knapsack" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -212,22 +258,23 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="195" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="OverrideImplement.combined" value="true" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="196" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="195" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="195" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/knapsack" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/commons-exec-1.1.jar!/" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="200" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="994" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="994" />
@@ -239,8 +286,8 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
@@ -248,10 +295,10 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
-  <component name="RunManager" selected="Application.KnapsackSolver">
+  <component name="RunManager" selected="Application.GraphColoringSolver">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -264,6 +311,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -291,19 +351,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -362,6 +409,30 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
+    <configuration default="false" name="GraphColoringSolver" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="coloring.GraphColoringSolver" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="-file=data/gc_50_5 -out=/tmp" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/coloring" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="coloring" />
+      <envs>
+        <env name="LD_LIBRARY_PATH" value="/usr/local/lib" />
+      </envs>
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="false" name="submit" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -376,9 +447,10 @@
       <ConfigurationWrapper RunnerId="Debug" />
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.KnapsackSolver" />
-      <item index="1" class="java.lang.String" itemvalue="Remote.submit" />
+      <item index="1" class="java.lang.String" itemvalue="Application.GraphColoringSolver" />
+      <item index="2" class="java.lang.String" itemvalue="Remote.submit" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -412,28 +484,31 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="1" width="1680" height="1024" extended-state="0" />
-    <editor active="true" />
+    <frame x="1679" y="27" width="1922" height="1024" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Sonar" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37844038" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37759817" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1906924" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290993" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6211604" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24570024" sideWeight="0.67007965" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32668883" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Jenkins" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2139808" sideWeight="0.50808316" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2497332" sideWeight="0.62240183" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.49191687" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3291714" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -502,52 +577,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/apps/jdk1.7/src.zip!/java/util/ArrayDeque.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="33" selection-start="3253" selection-end="3253" vertical-scroll-proportion="0.96483004" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/apps/jdk1.7/jre/lib/jfxrt.jar!/com/sun/javafx/collections/transformation/SortedList.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="19" selection-start="190" selection-end="190" vertical-scroll-proportion="0.08792497" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/apps/jdk1.7/src.zip!/java/util/TreeSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="392" column="13" selection-start="15108" selection-end="15108" vertical-scroll-proportion="0.33294255" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/apps/jdk1.7/src.zip!/java/util/SortedSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="212" column="6" selection-start="9891" selection-end="9891" vertical-scroll-proportion="0.7186401" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/apps/jdk1.7/src.zip!/java/util/RandomAccess.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="17" selection-start="1975" selection-end="1975" vertical-scroll-proportion="0.7561548" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/apps/jdk1.7/src.zip!/java/util/List.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="17" selection-start="4208" selection-end="4208" vertical-scroll-proportion="0.33294255">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/apps/jdk1.7/src.zip!/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="13" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.33294255">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/apps/jdk1.7/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="0" selection-start="5143" selection-end="5143" vertical-scroll-proportion="0.3321492">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/apps/jdk1.7/src.zip!/java/util/AbstractQueue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="112" column="17" selection-start="3429" selection-end="3429" vertical-scroll-proportion="0.0" />
@@ -560,9 +589,7 @@
     </entry>
     <entry file="jar://$USER_HOME$/apps/jdk1.7/src.zip!/java/util/Queue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="12" selection-start="6021" selection-end="6021" vertical-scroll-proportion="0.33294255">
-          <folding />
-        </state>
+        <state line="161" column="12" selection-start="6021" selection-end="6021" vertical-scroll-proportion="0.33294255" />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/apps/jdk1.7/src.zip!/java/lang/ref/Reference.java">
@@ -584,15 +611,71 @@
     </entry>
     <entry file="jar://$USER_HOME$/apps/jdk1.7/src.zip!/java/util/BitSet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="444" column="41" selection-start="14707" selection-end="14707" vertical-scroll-proportion="0.5271226">
+        <state line="444" column="41" selection-start="14707" selection-end="14707" vertical-scroll-proportion="0.5271226" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/knapsack/src/knapsack/KnapsackSolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="74" column="84" selection-start="815" selection-end="2006" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/apps/jdk1.7.0_05/src.zip!/java/io/PrintWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="32" selection-start="1739" selection-end="1739" vertical-scroll-proportion="0.7128906">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/apps/jdk1.7.0_05/src.zip!/java/io/PrintStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="13" selection-start="1549" selection-end="1549" vertical-scroll-proportion="0.7714844">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/apps/jdk1.7.0_05/src.zip!/java/io/OutputStreamWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="13" selection-start="2228" selection-end="2228" vertical-scroll-proportion="-1.25">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/apps/jdk1.7.0_05/src.zip!/java/io/Writer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="22" selection-start="857" selection-end="857" vertical-scroll-proportion="0.33203125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Downloads/commons-exec-1.1.jar!/org/apache/commons/exec/DefaultExecuteResultHandler.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="16" selection-start="911" selection-end="911" vertical-scroll-proportion="-13.8">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/apps/jdk1.7.0_05/src.zip!/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="396" column="0" selection-start="14554" selection-end="14554" vertical-scroll-proportion="0.33171913">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/apps/jdk1.7.0_05/src.zip!/java/awt/Color.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="405" column="11" selection-start="11780" selection-end="11780" vertical-scroll-proportion="0.39951575">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/coloring/src/coloring/GraphColoringSolver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="65" selection-start="211" selection-end="211" vertical-scroll-proportion="0.19366197">
-          <folding />
+        <state line="192" column="88" selection-start="6579" selection-end="6579" vertical-scroll-proportion="0.38256657">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -625,6 +708,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>groovy-2.1.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -672,7 +756,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>choco-solver-2.1.5-with-sources</last-edited>
+          <last-edited>commons-exec-1.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
