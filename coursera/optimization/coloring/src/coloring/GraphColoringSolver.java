@@ -1,6 +1,11 @@
 package coloring;
 
 import org.apache.commons.exec.*;
+import solver.Solver;
+import solver.constraints.IntConstraintFactory;
+import solver.variables.IntVar;
+import solver.variables.VariableFactory;
+import solver.variables.graph.UndirectedGraphVar;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -8,13 +13,6 @@ import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 
-/**
- * Created with IntelliJ IDEA.
- * User: patricio
- * Date: 7/3/13
- * Time: 9:24 PM
- * To change this template use File | Settings | File Templates.
- */
 public class GraphColoringSolver
 {
     public static void main(String[] args)
@@ -96,27 +94,19 @@ public class GraphColoringSolver
         cmdLine.addArgument(cnfFile.toString());
         cmdLine.addArgument(result.toString());
         DefaultExecuteResultHandler resultHandler = new DefaultExecuteResultHandler();
-        ExecuteWatchdog watchdog = new ExecuteWatchdog(1*60*1000);
+//        ExecuteWatchdog watchdog = new ExecuteWatchdog(10*60*1000);
         Executor executor = new DefaultExecutor();
-        executor.setWatchdog(watchdog);
+//        executor.setWatchdog(watchdog);
+        PumpStreamHandler streamHandler = new PumpStreamHandler(new FileOutputStream("/tmp/minisat.out"));
+        executor.setStreamHandler(streamHandler);
         executor.execute(cmdLine, resultHandler);
         resultHandler.waitFor();
         return resultHandler.getExitValue() == 10;
-
-// some time later the result handler callback was invoked so we
-// can safely request the exit value
-
-        //run command
-        // if satisfiable {
-        //  readSATResult(result)
-        //}
     }
 
     private static void generateCNF(final List<List<Integer>> adjacencyMatrix, final int nodes, final int edges, int maxColors, final File out)
     {
         try (BufferedWriter bf = new BufferedWriter(new FileWriter(out))) {
-//        Writer bf = new OutputStreamWriter(System.err);
-//        try {
             final int varNumber = nodes * maxColors;
             final int clauseNumber = nodes + maxColors * (maxColors - 1) / 2 + maxColors * edges;
 
@@ -135,10 +125,10 @@ public class GraphColoringSolver
             }
 
             for (int i = 0; i < adjacencyMatrix.size(); i++) {
-                List<Integer> node1 = adjacencyMatrix.get(i);
-                for (int j = 0; j < node1.size(); j++) {
-                    for (int k = 0;k < maxColors;k++) {
-                        bf.write("-" + getVariableIndex(node1.get(j), k, nodes) + " -" + getVariableIndex(i, k, nodes) + " 0\n");
+                List<Integer> nodeEdges = adjacencyMatrix.get(i);
+                for (Integer adjacentNode : nodeEdges) {
+                    for (int k = 0; k < maxColors; k++) {
+                        bf.write("-" + getVariableIndex(adjacentNode, k, nodes) + " -" + getVariableIndex(i, k, nodes) + " 0\n");
                     }
                 }
             }
@@ -188,14 +178,11 @@ public class GraphColoringSolver
             }
         }
 
-        try (BufferedWriter bf = new BufferedWriter(new FileWriter("/tmp/coloring.output"))) {
-            bf.write(color + " 1\n");
-            for (Integer assignedColor : nodesColor) {
-                bf.write(assignedColor + " ");
-            }
-            bf.write("\n");
-            bf.flush();
+        System.out.println(color + " 1");
+        for (Integer assignedColor : nodesColor) {
+            System.out.print(assignedColor + " ");
         }
+        System.out.println();
 
         try (BufferedWriter bf = new BufferedWriter(new FileWriter("/tmp/graph.dot"))) {
             bf.write("graph {\n");
@@ -212,9 +199,6 @@ public class GraphColoringSolver
             bf.write("}\n");
             bf.flush();
         }
-
-
-
     }
 
     private static String getColorString(final int color)
