@@ -17,7 +17,7 @@ def solveIt(inputData):
     # Runs the command: java KnapsackSolver -file=tmp.data
 
 #    process = Popen(['java', '-agentlib:jdwp=transport=dt_socket,server=y,suspend=y,address=5005', '-Xms512m', '-Xmx1024m', 'KnapsackSolver', '-file=' + tmpFileName],
-    process = Popen(['java', '-Xms512m', '-Xmx2048m', '-cp', '../out/production/coloring:/home/patricio/Downloads/commons-exec-1.1/commons-exec-1.1.jar', 'coloring.GraphColoringSolver', '-file=' + tmpFileName, '-out=/tmp'],
+    process = Popen(['java', '-Xms512m', '-Xmx2048m', '-cp', '../out/production/coloring:/home/pbarlett/Downloads/choco-2.1.5/choco-solver-2.1.5.jar:/home/pbarlett/Downloads/commons-exec-1.1.jar', 'coloring.GraphColoringSolver', '-file=' + tmpFileName],
                     stdout=PIPE)
     (stdout, stderr) = process.communicate()
 

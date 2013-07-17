@@ -1,5 +1,13 @@
 package coloring;
 
+import choco.Choco;
+import choco.Options;
+import choco.cp.model.CPModel;
+import choco.cp.solver.CPSolver;
+import choco.kernel.model.Model;
+import choco.kernel.model.variables.integer.IntegerVariable;
+import choco.kernel.solver.ContradictionException;
+import choco.kernel.solver.Solver;
 import org.apache.commons.exec.*;
 import solver.Solver;
 import solver.constraints.IntConstraintFactory;
@@ -8,10 +16,7 @@ import solver.variables.VariableFactory;
 import solver.variables.graph.UndirectedGraphVar;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class GraphColoringSolver
 {
@@ -24,7 +29,7 @@ public class GraphColoringSolver
         }
     }
 
-    public static void solve(String[] args) throws IOException, InterruptedException
+    public static void solve(String[] args) throws IOException, InterruptedException, ContradictionException
     {
         String fileName = null;
         String outDir = null;
@@ -40,8 +45,9 @@ public class GraphColoringSolver
         }
         if(fileName == null)
             return;
-        if(outDir == null)
-            return;
+        if(outDir == null) {
+            outDir = System.getProperty("user.tmpdir", "/tmp");
+        }
 
         // read the lines out of the file
         List<String> lines = new ArrayList<>();
@@ -76,6 +82,12 @@ public class GraphColoringSolver
 
         lines.clear();
 
+//        sat(fileName, outDir, nodes, edges, adjacencyMatrix);
+        cp(nodes, adjacencyMatrix);
+    }
+
+    private static void sat(final String fileName, final String outDir, final int nodes, final int edges, final List<List<Integer>> adjacencyMatrix) throws IOException, InterruptedException
+    {
         for (int i = 1; i < nodes; i++) {
             final String cnfFileName = new File(fileName).getName() + ".cnf";
             final File cnfFile = new File(outDir, cnfFileName);
@@ -199,6 +211,32 @@ public class GraphColoringSolver
             bf.write("}\n");
             bf.flush();
         }
+    }
+
+    private static int cp(final int totalNodes, final List<List<Integer>> adjacencyMatrix) throws ContradictionException
+    {
+        Model m = new CPModel();
+        final IntegerVariable[] nodesColor = Choco.makeIntVarArray("nodesColor", totalNodes, 1, 15, Options.V_ENUM);
+        final IntegerVariable maxColors = Choco.makeIntVar("maxColors", 1, totalNodes);
+        m.addConstraint(Choco.max(nodesColor, maxColors));
+        for (int i = 0; i < adjacencyMatrix.size(); i++) {
+            List<Integer> nodeAdjacency = adjacencyMatrix.get(i);
+            for (Integer adjacentNode : nodeAdjacency) {
+                m.addConstraint(Choco.neq(nodesColor[i], nodesColor[adjacentNode]));
+            }
+        }
+        Solver s = new CPSolver();
+        s.read(m);
+        s.getVar(nodesColor[0]).setVal(1);
+        s.minimize(s.getVar(maxColors), true);
+
+        System.out.println(s.getVar(maxColors).getVal() + " 1");
+        for (final IntegerVariable aNodesColor : nodesColor) {
+            System.out.print(s.getVar(aNodesColor).getVal() + " ");
+        }
+        System.out.println();
+
+        return s.getVar(maxColors).getVal();
     }
 
     private static String getColorString(final int color)
