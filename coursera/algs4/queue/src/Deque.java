@@ -14,7 +14,7 @@ public class Deque<Item> implements Iterable<Item> {
     }
     public boolean isEmpty()
     {
-        return first == last;
+        return size == 0;
     }
 
     public int size()
@@ -96,7 +96,7 @@ public class Deque<Item> implements Iterable<Item> {
 
     public Iterator<Item> iterator()
     {
-        return new DequeueIterator(first, last);
+        return new DequeueIterator();
 
     }
     public static void main(String[] args)
@@ -110,7 +110,6 @@ public class Deque<Item> implements Iterable<Item> {
         String s = deque.removeFirst();
         s = deque.removeLast();
         s = deque.removeLast();
-        ;
     }
 
     private class Node {
@@ -121,16 +120,13 @@ public class Deque<Item> implements Iterable<Item> {
     private class DequeueIterator
         implements Iterator<Item>
     {
-        private Node first,     last;
-
-        private DequeueIterator(Node first, Node last) {
-            this.first = first;
-            this.last = last;
-        }
+        private Node first = Deque.this.first;
+        private Node last = Deque.this.last;
+        private int size = Deque.this.size;
 
         @Override
         public boolean hasNext() {
-            return first != last;
+            return size > 0;
         }
 
         @Override
@@ -140,6 +136,7 @@ public class Deque<Item> implements Iterable<Item> {
             }
             final Item item = first.item;
             first = first.next;
+            size--;
             return item;
         }
 
