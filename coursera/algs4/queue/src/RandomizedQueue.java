@@ -3,6 +3,7 @@ import edu.princeton.cs.algs4.StdRandom;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+@SuppressWarnings("unchecked")
 public class RandomizedQueue<Item> implements Iterable<Item> {
     private Item[] items;
     private int size = 0;
