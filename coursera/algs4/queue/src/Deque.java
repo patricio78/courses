@@ -101,7 +101,7 @@ public class Deque<Item> implements Iterable<Item> {
     }
     public static void main(String[] args)
     {
-        Deque<String> deque = new Deque();
+        Deque<String> deque = new Deque<>();
 
         deque.addFirst("first1");
         deque.addFirst("first2");
